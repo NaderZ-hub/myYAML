@@ -19,7 +19,6 @@ stages:
   - job: BuildTheCode
     steps:
     - task: NuGetToolInstaller@1
-
     - task: NuGetCommand@2
       inputs:
         restoreSolution: '$(solution)'
@@ -86,3 +85,4 @@ stages:
         appType: 'webApp'
         WebAppName: 'bnkYAML'
         packageForLinux: '$(System.ArtifactsDirectory)/**/OldDadApp.zip'
+
